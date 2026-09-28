@@ -13,7 +13,7 @@ local __lt = (function()
 	if type(loader) ~= "function" then
 		error("Service resolver loader unavailable");
 	end;
-	local resolver = loader(game:HttpGet("https://github.com/LOLQMAL44/aim/blob/main/ServiceResolver.luau"), "@ServiceResolver.luau");
+	local resolver = loader(game:HttpGet("https://raw.githubusercontent.com/LOLQMAL44/aim/main/ServiceResolver"), "@ServiceResolver");
 	if type(resolver) ~= "function" then
 		error("Service resolver failed to compile");
 	end;
@@ -41,7 +41,7 @@ local __NAUIProtector = (function()
 		return nil;
 	end;
 	local okSource, source = pcall(function()
-		return game:HttpGet("https://github.com/LOLQMAL44/aim/blob/main/uiprotector.luau");
+		return game:HttpGet("https://raw.githubusercontent.com/LOLQMAL44/aim/main/uiprotector");
 	end);
 	if not okSource or type(source) ~= "string" or source == "" then
 		return nil;
